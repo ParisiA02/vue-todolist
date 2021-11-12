@@ -16,7 +16,7 @@
                 {{ toDoArray[i].text }}
                 <span @click="removeItem(i)">&#10008;</span>
             </li>
-            <li v-else class="undone">
+            <li v-else class="done">
                 {{ toDoArray[i].text }}
                 <span @click="removeItem(i)">&#10008;</span>
             </li>
