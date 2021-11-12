@@ -8,9 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="todoList" class="container">
-        <input type="text" v-model="newTask" placeholder="Inserisci nuova task">
-        <button @click="addTask()">Add Task</button>
+    <div id="todoList" class="container" >
+        <input type="text" v-model="newTask" placeholder="Inserisci nuova task" @keydown.enter="addTask">
+        <button @click="addTask">Add Task</button>
         <ul>
             <li v-for="item, i in toDoArray" :key="i" v-if="toDoArray[i].done === false">
                 {{ toDoArray[i].text }}
